@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StatusBarView" customModule="turtle_interview_project" customModuleProvider="target">
+            <connections>
+                <outlet property="logoImageView" destination="QKU-nI-Jxg" id="k5x-VS-kIF"/>
+                <outlet property="menuButton" destination="RZP-o6-WWm" id="hMl-fk-n85"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="475" height="72"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_180x180 1" translatesAutoresizingMaskIntoConstraints="NO" id="QKU-nI-Jxg">
+                    <rect key="frame" x="32" y="7" width="65" height="65"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="65" id="G3J-Pf-OhJ"/>
+                        <constraint firstAttribute="height" constant="65" id="god-r6-JYw"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZP-o6-WWm">
+                    <rect key="frame" x="419" y="24" width="24" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="24" id="oa4-jr-OQC"/>
+                        <constraint firstAttribute="height" constant="24" id="ozk-N7-UGI"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="menu_24px" imagePlacement="top"/>
+                    <connections>
+                        <action selector="menuBtn_onClick:" destination="-1" eventType="touchUpInside" id="Bij-3l-D4R"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="RZP-o6-WWm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="24" id="LbP-D2-sMO"/>
+                <constraint firstItem="QKU-nI-Jxg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="32" id="PaV-Tc-ILH"/>
+                <constraint firstItem="QKU-nI-Jxg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="7" id="Vn6-kU-RPa"/>
+                <constraint firstAttribute="trailing" secondItem="RZP-o6-WWm" secondAttribute="trailing" constant="32" id="Vrs-e4-XrD"/>
+                <constraint firstAttribute="bottom" secondItem="RZP-o6-WWm" secondAttribute="bottom" constant="24" id="qpA-lm-LnZ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-0.76335877862595414" y="10.211267605633804"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="logo_180x180 1" width="65" height="65"/>
+        <image name="menu_24px" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

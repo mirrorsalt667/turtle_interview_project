@@ -9,11 +9,23 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var statusBarView: StatusBarView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        statusBarView.delegate = self
+        
     }
 
+    override func loadView() {
+        super.loadView()
+        
+    }
 
 }
 
+extension ViewController: MenuOpen {
+    func ButtonTouchInside(_ component: StatusBarView) {
+        print("Navigation 打開目錄")
+    }
+}
