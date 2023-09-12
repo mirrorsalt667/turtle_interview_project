@@ -14,18 +14,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         statusBarView.delegate = self
-        
     }
 
     override func loadView() {
         super.loadView()
         
     }
-
 }
 
 extension ViewController: MenuOpen {
     func ButtonTouchInside(_ component: StatusBarView) {
-        print("Navigation 打開目錄")
+        if let navigation = navigationController {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let viewController = storyboard.instantiateViewController(withIdentifier: "MenuViewController")
+            navigation.pushViewController(viewController, animated: true)
+        }
     }
 }

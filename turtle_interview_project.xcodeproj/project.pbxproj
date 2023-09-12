@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C71A029F2AAF0BB100FA66B8 /* MenuRowButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71A029E2AAF0BB100FA66B8 /* MenuRowButtonView.swift */; };
+		C71A02A12AAF0BE700FA66B8 /* MenuRowButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C71A02A02AAF0BE700FA66B8 /* MenuRowButtonView.xib */; };
 		C7B6903E2AAD59050056084A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B6903D2AAD59050056084A /* AppDelegate.swift */; };
 		C7B690402AAD59050056084A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B6903F2AAD59050056084A /* SceneDelegate.swift */; };
 		C7B690422AAD59050056084A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B690412AAD59050056084A /* ViewController.swift */; };
@@ -16,9 +18,12 @@
 		C7B690572AAD71870056084A /* StatusBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B690562AAD71870056084A /* StatusBarView.swift */; };
 		C7B690592AAD73220056084A /* StatusBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7B690582AAD73220056084A /* StatusBarView.xib */; };
 		C7B6905C2AAD77530056084A /* NibOwnerLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B6905B2AAD77530056084A /* NibOwnerLoadable.swift */; };
+		C7B6905F2AAD87A40056084A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B6905E2AAD87A40056084A /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C71A029E2AAF0BB100FA66B8 /* MenuRowButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRowButtonView.swift; sourceTree = "<group>"; };
+		C71A02A02AAF0BE700FA66B8 /* MenuRowButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuRowButtonView.xib; sourceTree = "<group>"; };
 		C7B6903A2AAD59050056084A /* turtle_interview_project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = turtle_interview_project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7B6903D2AAD59050056084A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7B6903F2AAD59050056084A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +35,7 @@
 		C7B690562AAD71870056084A /* StatusBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarView.swift; sourceTree = "<group>"; };
 		C7B690582AAD73220056084A /* StatusBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatusBarView.xib; sourceTree = "<group>"; };
 		C7B6905B2AAD77530056084A /* NibOwnerLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibOwnerLoadable.swift; sourceTree = "<group>"; };
+		C7B6905E2AAD87A40056084A /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,8 +71,9 @@
 				C7B6905D2AAD86890056084A /* SupportingFiles */,
 				C7B6905A2AAD773F0056084A /* Helper */,
 				C7B690512AAD6CD50056084A /* Components */,
-				C7B690412AAD59050056084A /* ViewController.swift */,
 				C7B690432AAD59050056084A /* Main.storyboard */,
+				C7B690412AAD59050056084A /* ViewController.swift */,
+				C7B6905E2AAD87A40056084A /* MenuViewController.swift */,
 			);
 			path = turtle_interview_project;
 			sourceTree = "<group>";
@@ -76,6 +83,8 @@
 			children = (
 				C7B690562AAD71870056084A /* StatusBarView.swift */,
 				C7B690582AAD73220056084A /* StatusBarView.xib */,
+				C71A029E2AAF0BB100FA66B8 /* MenuRowButtonView.swift */,
+				C71A02A02AAF0BE700FA66B8 /* MenuRowButtonView.xib */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -160,6 +169,7 @@
 			files = (
 				C7B6904A2AAD59060056084A /* LaunchScreen.storyboard in Resources */,
 				C7B690472AAD59060056084A /* Assets.xcassets in Resources */,
+				C71A02A12AAF0BE700FA66B8 /* MenuRowButtonView.xib in Resources */,
 				C7B690592AAD73220056084A /* StatusBarView.xib in Resources */,
 				C7B690452AAD59050056084A /* Main.storyboard in Resources */,
 			);
@@ -173,9 +183,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7B6905C2AAD77530056084A /* NibOwnerLoadable.swift in Sources */,
+				C7B6905F2AAD87A40056084A /* MenuViewController.swift in Sources */,
 				C7B690572AAD71870056084A /* StatusBarView.swift in Sources */,
 				C7B690422AAD59050056084A /* ViewController.swift in Sources */,
 				C7B6903E2AAD59050056084A /* AppDelegate.swift in Sources */,
+				C71A029F2AAF0BB100FA66B8 /* MenuRowButtonView.swift in Sources */,
 				C7B690402AAD59050056084A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,13 +331,18 @@
 		C7B6904F2AAD59060056084A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					x86_64,
+					arm64,
+				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4752TZW2QV;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = turtle_interview_project/Info.plist;
+				INFOPLIST_FILE = turtle_interview_project/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -347,13 +364,18 @@
 		C7B690502AAD59060056084A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					x86_64,
+					arm64,
+				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4752TZW2QV;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = turtle_interview_project/Info.plist;
+				INFOPLIST_FILE = turtle_interview_project/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

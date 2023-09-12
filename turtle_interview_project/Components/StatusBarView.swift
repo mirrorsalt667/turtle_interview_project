@@ -11,6 +11,7 @@ protocol MenuOpen: NSObject {
     func ButtonTouchInside(_ component: StatusBarView)
 }
 
+//@IBDesignable
 class StatusBarView: UIView, NibOwnerLoadable {
     
     @IBOutlet weak var logoImageView: UIImageView!
@@ -28,12 +29,11 @@ class StatusBarView: UIView, NibOwnerLoadable {
         customInit()
     }
     
-    // MARK: Custom Init
     private func customInit() {
         loadNibContent()
     }
     
-    // MARK: Action
+    // MARK: - Action
     
     @IBAction func menuBtn_onClick(_ sender: Any) {
         delegate?.ButtonTouchInside(self)

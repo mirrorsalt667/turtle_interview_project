@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Sig-sQ-WTA">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--StopInfoViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="turtle_interview_project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" title="StopInfoViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="turtle_interview_project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,12 +25,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wql-mi-lqY" customClass="StatusBarView" customModule="turtle_interview_project" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="59" width="393" height="72"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="72"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="72" id="21k-uy-Hvg"/>
                                 </constraints>
                             </view>
+                            <navigationBar hidden="YES" contentMode="scaleToFill" id="Cbd-8k-FqU">
+                                <rect key="frame" x="0.0" y="23" width="393" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="hCC-Ub-hEq"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -41,6 +49,7 @@
                             <constraint firstItem="Wql-mi-lqY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fV4-Ef-y2M"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ZL7-gM-WN2"/>
                     <connections>
                         <outlet property="statusBarView" destination="Wql-mi-lqY" id="Xu5-eP-i2X"/>
                     </connections>
@@ -49,8 +58,160 @@
             </objects>
             <point key="canvasLocation" x="58" y="-2"/>
         </scene>
+        <!--MenuViewController-->
+        <scene sceneID="re0-Zn-4de">
+            <objects>
+                <viewController storyboardIdentifier="MenuViewController" title="MenuViewController" id="DjZ-Nn-yXf" customClass="MenuViewController" customModule="turtle_interview_project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cb1-qI-MPE">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="az1-4m-ogY">
+                                <rect key="frame" x="0.0" y="59" width="393" height="72"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_180x180 1" translatesAutoresizingMaskIntoConstraints="NO" id="ll0-za-Z1T">
+                                        <rect key="frame" x="32" y="7" width="65" height="65"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="65" id="F2m-fQ-7T7"/>
+                                            <constraint firstAttribute="height" constant="65" id="OH0-q2-4iP"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7R6-sI-vF9">
+                                        <rect key="frame" x="337" y="24" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="mVt-S3-C3O"/>
+                                            <constraint firstAttribute="width" constant="24" id="mcN-OQ-PGD"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system">
+                                            <color key="baseForegroundColor" name="main_green"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="closeMenu_onClike:" destination="DjZ-Nn-yXf" eventType="touchUpInside" id="4VU-Fw-x0t"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="7R6-sI-vF9" secondAttribute="bottom" constant="24" id="3FO-3k-bBq"/>
+                                    <constraint firstAttribute="height" constant="72" id="CFp-Vc-Ezt"/>
+                                    <constraint firstItem="ll0-za-Z1T" firstAttribute="top" secondItem="az1-4m-ogY" secondAttribute="top" constant="7" id="Htb-PJ-ukZ"/>
+                                    <constraint firstItem="7R6-sI-vF9" firstAttribute="top" secondItem="az1-4m-ogY" secondAttribute="top" constant="24" id="aTD-NB-oRn"/>
+                                    <constraint firstItem="ll0-za-Z1T" firstAttribute="leading" secondItem="az1-4m-ogY" secondAttribute="leading" constant="32" id="shI-mc-Qvl"/>
+                                    <constraint firstAttribute="trailing" secondItem="7R6-sI-vF9" secondAttribute="trailing" constant="32" id="uLZ-Qe-TTp"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="32F-Sm-hPZ">
+                                <rect key="frame" x="0.0" y="131" width="393" height="721"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="fH4-Bx-gJG">
+                                        <rect key="frame" x="40" y="40" width="313" height="303"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1RN-Lv-thg" customClass="MenuRowButtonView" customModule="turtle_interview_project" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="313" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="73L-MS-zhd"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qWD-u4-7KH" customClass="MenuRowButtonView" customModule="turtle_interview_project" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="67" width="313" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="4UG-tc-mBT"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aIX-4m-eYi" customClass="MenuRowButtonView" customModule="turtle_interview_project" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="134" width="313" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="M7J-6Y-bz4"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="npg-XV-vfT" customClass="MenuRowButtonView" customModule="turtle_interview_project" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="201" width="313" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="qCu-yb-kiv"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HPd-TP-jgT" customClass="MenuRowButtonView" customModule="turtle_interview_project" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="268" width="313" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="1XX-er-Jw5"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EMS-TV-5Np">
+                                        <rect key="frame" x="40" y="607" width="81" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="81" id="TGv-Vv-x2P"/>
+                                            <constraint firstAttribute="height" constant="40" id="jxT-WY-YY8"/>
+                                        </constraints>
+                                        <color key="tintColor" name="main_green"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="登入">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="main_green"/>
+                                <constraints>
+                                    <constraint firstItem="fH4-Bx-gJG" firstAttribute="top" secondItem="32F-Sm-hPZ" secondAttribute="topMargin" constant="32" id="46V-g0-mNW"/>
+                                    <constraint firstItem="EMS-TV-5Np" firstAttribute="leading" secondItem="32F-Sm-hPZ" secondAttribute="leadingMargin" constant="32" id="Df3-q6-lem"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="EMS-TV-5Np" secondAttribute="bottom" constant="32" id="d12-Xi-Lhz"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="fH4-Bx-gJG" secondAttribute="trailing" constant="32" id="oSb-Am-gpD"/>
+                                    <constraint firstItem="fH4-Bx-gJG" firstAttribute="leading" secondItem="32F-Sm-hPZ" secondAttribute="leadingMargin" constant="32" id="ylt-wj-f6c"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2oD-yx-dTr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="32F-Sm-hPZ" firstAttribute="top" secondItem="az1-4m-ogY" secondAttribute="bottom" id="Ejf-7B-k2O"/>
+                            <constraint firstAttribute="bottom" secondItem="32F-Sm-hPZ" secondAttribute="bottom" id="awB-FG-YUP"/>
+                            <constraint firstItem="32F-Sm-hPZ" firstAttribute="leading" secondItem="2oD-yx-dTr" secondAttribute="leading" id="hnw-ao-Tnc"/>
+                            <constraint firstItem="2oD-yx-dTr" firstAttribute="trailing" secondItem="32F-Sm-hPZ" secondAttribute="trailing" id="lpc-NA-sV4"/>
+                            <constraint firstItem="az1-4m-ogY" firstAttribute="leading" secondItem="2oD-yx-dTr" secondAttribute="leading" id="qMc-0L-bc1"/>
+                            <constraint firstItem="az1-4m-ogY" firstAttribute="top" secondItem="2oD-yx-dTr" secondAttribute="top" id="uJr-jR-QFG"/>
+                            <constraint firstItem="2oD-yx-dTr" firstAttribute="trailing" secondItem="az1-4m-ogY" secondAttribute="trailing" id="wQo-OZ-wZt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityButton" destination="HPd-TP-jgT" id="erL-Wa-HM2"/>
+                        <outlet property="closeMenuButton" destination="7R6-sI-vF9" id="E6r-Xc-Rac"/>
+                        <outlet property="loginButton" destination="EMS-TV-5Np" id="Zew-za-we9"/>
+                        <outlet property="newsButton" destination="npg-XV-vfT" id="rQa-7X-xvR"/>
+                        <outlet property="stopInfoButton" destination="aIX-4m-eYi" id="vg5-rX-oHz"/>
+                        <outlet property="takingFeeButton" destination="qWD-u4-7KH" id="SYY-Fc-bcf"/>
+                        <outlet property="usingGuideButton" destination="1RN-Lv-thg" id="rOv-ZL-J9M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CXO-Cx-M7n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="948.85496183206101" y="-2.1126760563380285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CiG-TC-R37">
+            <objects>
+                <navigationController id="Sig-sQ-WTA" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="MS6-YX-icC">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="hvz-QT-gud"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ezV-z5-Uer" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-839" y="-2"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="logo_180x180 1" width="65" height="65"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="main_green">
+            <color red="0.70980392156862748" green="0.80000000000000004" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
