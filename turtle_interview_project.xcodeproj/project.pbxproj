@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C71390E82AB060030062AFF0 /* StationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71390E72AB060030062AFF0 /* StationTableViewCell.swift */; };
+		C71390EB2AB06D7F0062AFF0 /* YoubikeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71390EA2AB06D7F0062AFF0 /* YoubikeType.swift */; };
+		C71390ED2AB06DF10062AFF0 /* FetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71390EC2AB06DF10062AFF0 /* FetchData.swift */; };
 		C71A029F2AAF0BB100FA66B8 /* MenuRowButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71A029E2AAF0BB100FA66B8 /* MenuRowButtonView.swift */; };
 		C71A02A12AAF0BE700FA66B8 /* MenuRowButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C71A02A02AAF0BE700FA66B8 /* MenuRowButtonView.xib */; };
 		C7B6903E2AAD59050056084A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B6903D2AAD59050056084A /* AppDelegate.swift */; };
@@ -22,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C71390E72AB060030062AFF0 /* StationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationTableViewCell.swift; sourceTree = "<group>"; };
+		C71390EA2AB06D7F0062AFF0 /* YoubikeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoubikeType.swift; sourceTree = "<group>"; };
+		C71390EC2AB06DF10062AFF0 /* FetchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchData.swift; sourceTree = "<group>"; };
 		C71A029E2AAF0BB100FA66B8 /* MenuRowButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRowButtonView.swift; sourceTree = "<group>"; };
 		C71A02A02AAF0BE700FA66B8 /* MenuRowButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuRowButtonView.xib; sourceTree = "<group>"; };
 		C7B6903A2AAD59050056084A /* turtle_interview_project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = turtle_interview_project.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +55,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C71390E92AB06D5F0062AFF0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C71390EA2AB06D7F0062AFF0 /* YoubikeType.swift */,
+				C71390EC2AB06DF10062AFF0 /* FetchData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C7B690312AAD59050056084A = {
 			isa = PBXGroup;
 			children = (
@@ -68,12 +83,14 @@
 		C7B6903C2AAD59050056084A /* turtle_interview_project */ = {
 			isa = PBXGroup;
 			children = (
+				C71390E92AB06D5F0062AFF0 /* Model */,
 				C7B6905D2AAD86890056084A /* SupportingFiles */,
 				C7B6905A2AAD773F0056084A /* Helper */,
 				C7B690512AAD6CD50056084A /* Components */,
 				C7B690432AAD59050056084A /* Main.storyboard */,
 				C7B690412AAD59050056084A /* ViewController.swift */,
 				C7B6905E2AAD87A40056084A /* MenuViewController.swift */,
+				C71390E72AB060030062AFF0 /* StationTableViewCell.swift */,
 			);
 			path = turtle_interview_project;
 			sourceTree = "<group>";
@@ -184,10 +201,13 @@
 			files = (
 				C7B6905C2AAD77530056084A /* NibOwnerLoadable.swift in Sources */,
 				C7B6905F2AAD87A40056084A /* MenuViewController.swift in Sources */,
+				C71390ED2AB06DF10062AFF0 /* FetchData.swift in Sources */,
+				C71390E82AB060030062AFF0 /* StationTableViewCell.swift in Sources */,
 				C7B690572AAD71870056084A /* StatusBarView.swift in Sources */,
 				C7B690422AAD59050056084A /* ViewController.swift in Sources */,
 				C7B6903E2AAD59050056084A /* AppDelegate.swift in Sources */,
 				C71A029F2AAF0BB100FA66B8 /* MenuRowButtonView.swift in Sources */,
+				C71390EB2AB06D7F0062AFF0 /* YoubikeType.swift in Sources */,
 				C7B690402AAD59050056084A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
